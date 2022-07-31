@@ -1,0 +1,33 @@
+local library = {}
+
+local function library.ConsoleSay(msg :string, color: string, newLine: boolean)
+    local colors = {
+        red = "@@RED@@",
+        blue = "@@BLUE@@",
+        green = "@@GREEN@@",
+        cyan = "@@CYAN@@",
+        magenta = "@@MAGENTA@@",
+        brown = "@@BROWN@@",
+        yellow = "@@YELLOW@@",
+        white = "@@WHITE@@",
+        ['light gray'] = "@@LIGHT_GRAY@@",
+        ['dark gray'] = "@@DARK_GRAY@@",
+        ['light blue'] = "@@LIGHT_BLUE@@",
+        ['light green'] = "@@LIGHT_GREEN@@",
+        ['light cyan'] = "@@LIGHT_CYAN@@",
+        ['light red'] = "@@LIGHT_RED@@",
+        ['light magenta'] = "@@LIGHT_MAGENTA@@"
+    }
+    rconsoleprint(colors[string.lower(color)])
+    if newLine then
+       rconsoleprint('\n'..msg)
+    else
+        rconsoleprint(msg)
+    end
+end
+
+local function library.sendNotification_Callback()
+    -->
+end
+
+return library
